@@ -13,8 +13,20 @@ Fortunatelly, *FFMPEG* abstracts away most of the hard work for breaking a video
 In terminal navigate to the folder containing your video file and type:
 
 ```bash
-ffmpeg -i SunsetWavesCloseUpH264.mp4 -r 30 -f image2 /image-%0d.png
+ffmpeg -i SunsetWavesCloseUpH264.mp4 -r 30 -f image2 image-%0d.png
 ```
+
+The above command does a couple things:
+* `-i SunsetWavesCloseUpH264.mp4` selects sets the input (-i) file to SunsetWavesCloseUpH264.mp4
+* `-r 30` sets the frame rate to 30 frames/second. It is best to match this with the frame rate of your video file (FFMPEG may do this automatically without the -r or it might just set it to some preset value). This value also tells you how many frames you'll end up with at the end of this process (30frames/s * length of video (in seconds)).
+* `-f image2 image-%0d.png` sets the output files to be a sequence of images with the prefix `image-` followed by a sequence of digits. `%0d` sets the sequence of number to be without any leading zeros. Alternatively, you can set it to `%03d` which will make sure the filename always has *at least* 3 numerical digits.
+** For example: 
+*** `%0d` will cause the filenames to be: image-0.png, image-1.png, ..., image-n.png (where n is the number of frames contained in the video).
+*** `%03d` will cause the fienames to be: image-000.png, image-001.png, ..., image-n.png.
+
+**Extra Notes**:
+* The filename (image-%0d.png) can really be named anything. e.g. waves-%0d.png, image%0d.png.
+* It is probably best to make 
 
 
 
