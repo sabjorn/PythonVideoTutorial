@@ -17,8 +17,7 @@ import glob
 Next, glob is used to create a list of all the files in the directory:
 
 ```python
-filelocation = "/pathToImage/image-*.png" #a variable for pointing to the files
-files = glob.glob(filelocation)
+files = glob.glob("/pathToImage/image-*.png")
 ```
 
 Using `image-*.png` will select every file in the directory with `image-` and `.png` since the `*` is a wildcard and is replaced by every number of file.
