@@ -53,4 +53,4 @@ In essence, by having the `for loop` count from `1` (the first integer value of 
 
 There are many ways to improve the above code for ease of use and efficiency. First, variables can be used to store the filepath information. Second, `array_copy` is created every loop. This is usually unnecessary and with a bit of work a buffer can be made outside of the *for loop* and continuously reused.
 
-####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part3-BatchProcessing.md): Putting the Frames Back Together
+####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part4-CombiningFrames.md): Putting the Frames Back Together
