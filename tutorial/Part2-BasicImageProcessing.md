@@ -10,7 +10,7 @@ Once the video is split up the video (see [Part 1](https://github.com/sabjorn/Py
 
 Here is the input video frame:
 
-![First Frame - Pre-Processing](https://github.com/sabjorn/PythonVideoTutorial/blob/master/ExampleImages/processed_image-0.png)
+![First Frame - Pre-Processing](https://github.com/sabjorn/PythonVideoTutorial/blob/master/ExampleImages/image-1.png)
 
 To start off, import Numpy and PILLOW:
 ```python
