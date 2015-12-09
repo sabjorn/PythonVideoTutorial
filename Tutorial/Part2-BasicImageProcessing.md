@@ -75,4 +75,4 @@ This last step is easy but a little confusing:
 
 Finally, `output_image.save()` will take a PILLOW Image and save it to a file.
 
-####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial): Batch Importing and Processing of Images
+####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part3-BatchProcessing.md): Batch Importing and Processing of Images

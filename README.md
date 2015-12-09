@@ -15,3 +15,4 @@ The video used in this tutorial is available for download at [archive.org](https
 ## Table of Contents
 * [Part 1](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part1-SplitVideo.md) -  Using FFMPEG to Convert Video to Images
 * [Part 2](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part2-BasicImageProcessing.md) - Basic Image Processing in Python
+* [Part 3](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part3-BatchProcessing.md): Batch Processing
