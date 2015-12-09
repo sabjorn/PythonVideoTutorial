@@ -32,3 +32,5 @@ The above command does a couple things:
 **Extra Notes**:
 * The filename (image-%0d.png) can really be named anything. e.g. waves-%0d.png, image%0d.png. I do not know the best filetype to use for this process. I'm just partial to .pngs.
 * It is probably best to make a folder and have the frames output to this folder (e.g. `-f image2 subfoldername/image-%0d.png) otherwise you'll have a big mess on your hands (i.e. 10,000 frames on your desktop).
+
+###[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial/Part2-BasicImageProcessing.md): Importing and Processing Images
