@@ -57,6 +57,8 @@ output_image = Image.fromarray(np.uint8(array_copy)) #convert back to PIL Image
 output_image.save("processed_image-1.png")
 ```
 
+![alt text](https://github.com/sabjorn/PythonVideoTutorial/blob/master/ExampleImages/processed_image-1.png "Logo Title Text 1")
+
 This last step is easy but a little confusing. *np.uint8()* takes an array and casts it into a specific type. Because RGB colour space uses values between [0,255], the array is cast as a *uint8* datatype (which is a byte of only positive values ranging from 0 - 255). This step is really only necessary if the processing step pushes the image array outside of this range (otherwise an error occurs)
 
 *Image.fromarray()* takes the Numpy image array and turns it back into a PILLOW Image. This image is stored as a variable called *output_image*.
