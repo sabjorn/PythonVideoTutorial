@@ -34,4 +34,4 @@ The above command does a couple things:
 * It is probably best to make a folder and have the frames output to this folder (e.g. `-f image2 subfoldername/image-%0d.png) otherwise you'll have a big mess on your hands (i.e. 10,000 frames on your desktop).
 * FFMPEG starts indexing the image files at 1 (i.e. image-1.png) not 0 (i.e. image-0.png).
 
-####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial/Part2-BasicImageProcessing.md): Importing and Processing Images
+####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part2-BasicImageProcessing.md): Importing and Processing Images

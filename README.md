@@ -13,5 +13,5 @@ This tutorial utilizes:
 The video used in this tutorial is available for download at [archive.org](https://archive.org/details/SunsetWavesClosseUp).
 
 ## Table of Contents
-* [Part 1](https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial/Part1-SplitVideo.md) -  Using FFMPEG to Convert Video to Images
-* [Part 2](https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial/Part2-BasicImageProcessing.md) - Basic Image Processing in Python
+* [Part 1](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part1-SplitVideo.md) -  Using FFMPEG to Convert Video to Images
+* [Part 2](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part2-BasicImageProcessing.md) - Basic Image Processing in Python
