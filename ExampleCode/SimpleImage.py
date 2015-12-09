@@ -1,3 +1,7 @@
+#Example code used to import and process an image.
+#Step by step is available here: 
+#https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial/Part2-BasicImageProcessing.md
+
 import numpy as np
 from PIL import Image
 
