@@ -8,9 +8,9 @@ Once the video is split up the video (see [Part 1](https://github.com/sabjorn/Py
 
 * *Numpy* adds *C* like arrays into Python. It is also incredibly efficient because it is actually written in C and accessed through Python. Numpy also includes a tonne of functions for efficiently manipulating these arrays (e.g. np.dot, np.fft).
 
-Here is the input video frame:
+Here is an example input video frame:
 
-![First Frame - Pre-Processing](https://github.com/sabjorn/PythonVideoTutorial/blob/master/ExampleImages/image-1.png)
+![First Frame - Before Processing](https://github.com/sabjorn/PythonVideoTutorial/blob/master/ExampleImages/image-1.png)
 
 To start off, import Numpy and PILLOW:
 ```python
@@ -73,4 +73,4 @@ This last step is easy but a little confusing:
 
 Finally, `output_image.save()` will take a PILLOW Image and save it to a file.
 
-###[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial): Batch Importing and Processing of Images
+####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/tutorial): Batch Importing and Processing of Images
