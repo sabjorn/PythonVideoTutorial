@@ -17,3 +17,5 @@ The video used in this tutorial is available for download at [archive.org](https
 * [Part 2](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part2-BasicImageProcessing.md) - Basic Image Processing in Python
 * [Part 3](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part3-BatchProcessing.md) - Batch Processing
 * [Part 4](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part4-CombiningFrames.md) - Putting the Frames Back Together
+* Part 5 (in Progress) Frame processing example.
+* Part 6 (in Progress) Name Pipes (to save time and disk space!)
