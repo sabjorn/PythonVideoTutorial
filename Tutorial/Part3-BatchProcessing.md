@@ -52,4 +52,6 @@ In essence, by having the `for loop` count from `1` (the first integer value of 
 
 There are many ways to improve the above code for ease of use and efficiency. First, variables can be used to store the filepath information. Second, `array_copy` is created every loop. This is usually unnecessary and with a bit of work a buffer can be made outside of the *for loop* and continuously reused.
 
+A final thing to consider: [Part 2](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part2-BasicImageProcessing.md) contains a fairly trivial example of image processing. The power of this process becomes apparent when the index value for frames (variable `i` in the above code) is used as a modulation value. For example, by using an if statement, every 3rd frame in a series could have its colour layers switched around while the other 2 frames are kept the same.
+
 ####[Next Step](https://github.com/sabjorn/PythonVideoTutorial/blob/master/Tutorial/Part4-CombiningFrames.md): Putting the Frames Back Together
