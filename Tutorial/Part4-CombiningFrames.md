@@ -27,3 +27,4 @@ Here's a bit of an analysis of the command:
 
 * `./processed_video.mov` sets the name of the output file. FFMPEG seems to automatically handle different filetypes. So, `.mp4`, `.mkv`, etc should work.
 
+The final step is to try to open the output file. If it works, congratulations! You're on your way to doing some neat stuff.
