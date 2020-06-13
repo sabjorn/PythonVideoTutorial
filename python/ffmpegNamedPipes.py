@@ -10,6 +10,9 @@ from PIL import Image
 # so may need to use regular pipes
 # https://stackoverflow.com/questions/13332268/how-to-use-subprocess-command-with-pipes#:~:text=To%20use%20a%20pipe%20with,have%20to%20pass%20shell%3DTrue%20.&text=In%20your%20particular%20case%2C%20however,find%20on%20the%20output.
 
+# This is probably the real answer but working with pipes would be cool
+# https://github.com/kkroening/ffmpeg-python/blob/master/examples/README.md#convert-sound-to-raw-pcm-audio
+
 # create FIFOS and Processes
 os.mkfifo("ffmpegOut")
 # ffmpeg -i SunsetWavesCloseUpH264.mp4 -r 30 -f image2 pipe:1 > ffmpegOut
