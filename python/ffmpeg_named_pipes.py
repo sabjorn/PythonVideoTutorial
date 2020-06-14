@@ -18,13 +18,18 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
-def get_video_size(filename):
+def get_video_info(filename):
     logger.info('Getting video size for {!r}'.format(filename))
     probe = ffmpeg.probe(filename)
     video_info = next(s for s in probe['streams'] if s['codec_type'] == 'video')
+    
     width = int(video_info['width'])
     height = int(video_info['height'])
-    return width, height
+    
+    framerate = video_info['r_frame_rate'].split("/")
+    framerate = float(framerate[0])/float(framerate[1])
+
+    return width, height, framerate
 
 
 def start_ffmpeg_process1(in_filename):
@@ -38,11 +43,11 @@ def start_ffmpeg_process1(in_filename):
     return subprocess.Popen(args, stdout=subprocess.PIPE)
 
 
-def start_ffmpeg_process2(out_filename, width, height):
+def start_ffmpeg_process2(out_filename, width, height, framerate):
     logger.info('Starting ffmpeg process2')
     args = (
         ffmpeg
-        .input('pipe:', format='rawvideo', pix_fmt='rgb24', s='{}x{}'.format(width, height))
+        .input('pipe:', format='rawvideo', pix_fmt='rgb24', framerate='{}'.format(framerate), s='{}x{}'.format(width, height))
         .output(out_filename, pix_fmt='yuv420p')
         .overwrite_output()
         .compile()
@@ -83,17 +88,26 @@ def write_frame(process2, frame):
 
 
 def run(in_filename, out_filename, imagefilter):
-    width, height = get_video_size(in_filename)
+    width, height, framerate = get_video_info(in_filename)
     process1 = start_ffmpeg_process1(in_filename)
-    process2 = start_ffmpeg_process2(out_filename, width, height)
+    process2 = start_ffmpeg_process2(out_filename, width, height, framerate)
+
+    coefficient = .3 # [0,1]
+    frame_delay = read_frame(process1, width, height)
     while True:
         in_frame = read_frame(process1, width, height)
+
         if in_frame is None:
             logger.info('End of input stream')
             break
 
         logger.debug('Processing frame')
-        out_frame = imagefilter(in_frame)
+        out_frame = np.copy(in_frame)
+        out_frame = (in_frame * coefficient) + (frame_delay * (1 - coefficient))
+        frame_delay = np.copy(in_frame)
+        
+        # out_frame = imagefilter(in_frame)
+        
 
         write_frame(process2, out_frame)
 
